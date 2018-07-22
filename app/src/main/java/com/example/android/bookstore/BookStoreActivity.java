@@ -13,8 +13,6 @@ import android.widget.TextView;
 import com.example.android.bookstore.data.BookDbHelper;
 import com.example.android.bookstore.data.BookContract.BookEntry;
 
-import org.w3c.dom.Text;
-
 public class BookStoreActivity extends AppCompatActivity {
 
     private BookDbHelper mDbHelper;
@@ -68,8 +66,6 @@ public class BookStoreActivity extends AppCompatActivity {
             int nameColumnIndex = cursor.getColumnIndex(BookEntry.COLUMN_PRODUCT_NAME);
             int priceColumnIndex = cursor.getColumnIndex(BookEntry.COLUMN_PRODUCT_PRICE);
             int quantityColumnIndex = cursor.getColumnIndex(BookEntry.COLUMN_PRODUCT_QUANTITY);
-            int supplierNameColumnIndex = cursor.getColumnIndex(BookEntry.COLUMN_SUPPLIER_NAME);
-            int supplierPhoneColumnIndex = cursor.getColumnIndex(BookEntry.COLUMN_SUPPLIER_PHONE);
             //Iterate through all returned rows
             while (cursor.moveToNext()) {
                 // Use that index to extract the String or Int value of the word
